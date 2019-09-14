@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>NASA</title>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<!--Search input-->
+<div class="box">
+    <div class="searchField">
+        <span class="icon"><a onclick="searchPicture()"><i class="fa fa-search" style="padding: 12px 10px;"></i></a></span>
+        <input type="search" id="search" placeholder="Search for photos" />
+    </div>
+</div>
+
+<!--Daily picture modal window-->
+<div id="dailyModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div id="photoTitle">
+            <h3 id="apodTitle" style="margin-top: 60px;"></h3>
+        </div>
+        <div id="imageDiv">
+            <img id="apodImage" width="70%" height="400px"/>
+        </div>
+        <div id="photoExplanation">
+            <p id="apodExplanation"></p>
+        </div>
+    </div>
+</div>
+
+<!--Photo library for search-->
+<div id="myModalLibrary" class="modal">
+    <div class="button" id="closeButton">
+        <div class="circle"></div>
+        <a href="#" onclick="closeModalLibrary()">Back</a>
+    </div>
+</div>
+
+<!--Daily picture button-->
+<div class="button" id="mainButton">
+    <div class="circle"></div>
+    <a href="#" onclick="loadDailyPicture()">NASA's daily photo</a>
+</div>
+
+<!--Background-->
+<div id='stars'></div>
+
+<div id='title'>
+    SPACE
+</div>
+<div id='subtitle'>
+    <span>
+        <i>“Not just beautiful, though - the stars are like the trees in the forest,
+            alive and breathing. And they're watching me.”</i><br><br>
+    </span>
+    <span>
+        Haruki Murakami
+    </span>
+</div>
+
+</body>
+</html>
